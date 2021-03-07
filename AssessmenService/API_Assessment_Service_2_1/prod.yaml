@@ -1,0 +1,8 @@
+service: api-assessment-prod
+runtime: custom
+env: flex
+env_variables:
+    ASPNETCORE_ENVIRONMENT: "production"
+
+# beta_settings:
+#   cloud_sql_instances: "tww-ccs-northhr-prod:europe-west1:projecthr-prod=tcp:3306"

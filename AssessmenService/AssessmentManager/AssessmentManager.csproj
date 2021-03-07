@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Configurations>Debug;Release;Stage;Dev;Prod</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssessmentManager.cs" />
+    <Compile Remove="IAssessmentManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AssessmentPersistence\AssessmentPersistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ProjectHRCommon">
+      <HintPath>..\..\Libararies\Common\netcoreapp2.1\ProjectHRCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

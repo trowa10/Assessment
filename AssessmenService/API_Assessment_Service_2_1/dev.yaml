@@ -1,0 +1,8 @@
+service: api-assessment-dev
+runtime: custom
+env: flex
+env_variables:
+    ASPNETCORE_ENVIRONMENT: "development"
+
+#beta_settings:
+#    cloud_sql_instances: "tww-ccs-northhr-prod:europe-west1:projecthr-devtest=tcp:3306"

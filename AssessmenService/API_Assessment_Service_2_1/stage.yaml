@@ -1,0 +1,8 @@
+service: api-assessment-stage
+runtime: custom
+env: flex
+env_variables:
+    ASPNETCORE_ENVIRONMENT: "staging"
+
+#beta_settings:
+#    cloud_sql_instances: "tww-ccs-northhr-prod:europe-west1:projecthr-staging=tcp:3306"

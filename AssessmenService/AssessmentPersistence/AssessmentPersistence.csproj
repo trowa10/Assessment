@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Configurations>Debug;Release;Stage;Dev;Prod</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssessmentPersistence.cs" />
+    <Compile Remove="IAssessmentPersistence.cs" />
+    <Compile Remove="ICrudAssessmentUserStatusPersistence.cs" />
+    <Compile Remove="Migrations\20200408090134_updateScoreTable.cs" />
+    <Compile Remove="Migrations\20200408090134_updateScoreTable.Designer.cs" />
+    <Compile Remove="Migrations\20200408092428_addFKScoreToUserStatus.cs" />
+    <Compile Remove="Migrations\20200408092428_addFKScoreToUserStatus.Designer.cs" />
+    <Compile Remove="Migrations\20200408095803_AddNAInScoreTableSeedData.cs" />
+    <Compile Remove="Migrations\20200408095803_AddNAInScoreTableSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20200408101726_AddAssessmentTemplateIdInScore.cs" />
+    <Compile Remove="Migrations\20200408101726_AddAssessmentTemplateIdInScore.Designer.cs" />
+    <Compile Remove="Migrations\20200417113637_check.cs" />
+    <Compile Remove="Migrations\20200417113637_check.Designer.cs" />
+    <Compile Remove="Migrations\20200417113743_check2.cs" />
+    <Compile Remove="Migrations\20200417113743_check2.Designer.cs" />
+    <Compile Remove="Migrations\20200417155817_AddingAssessmentTemplateRelationShipToAssessmentTranslationAndAddSeedingData.cs" />
+    <Compile Remove="Migrations\20200417155817_AddingAssessmentTemplateRelationShipToAssessmentTranslationAndAddSeedingData.Designer.cs" />
+    <Compile Remove="Migrations\20200417161814_RenameAssessmentTranslationToTranslationQuestionnaire.cs" />
+    <Compile Remove="Migrations\20200417161814_RenameAssessmentTranslationToTranslationQuestionnaire.Designer.cs" />
+    <Compile Remove="Migrations\20200423065014_CreateTemplatePermissionTableHasIndex.cs" />
+    <Compile Remove="Migrations\20200423065014_CreateTemplatePermissionTableHasIndex.Designer.cs" />
+    <Compile Remove="Migrations\20200427130939_staging.cs" />
+    <Compile Remove="Migrations\20200427130939_staging.Designer.cs" />
+    <Compile Remove="Migrations\20200507115052_NewAssessmentCodePropertyAndLookupTable.cs" />
+    <Compile Remove="Migrations\20200507115052_NewAssessmentCodePropertyAndLookupTable.Designer.cs" />
+    <Compile Remove="Migrations\20200624150712_AlterAssessmentAnswerByAddingDateTimeSubmittedColumn.cs" />
+    <Compile Remove="Migrations\20200624150712_AlterAssessmentAnswerByAddingDateTimeSubmittedColumn.Designer.cs" />
+    <Compile Remove="Migrations\20201002122218_CreateTableAssessmentFormTypeAndAlterAssessmentTemplateToAddColumnTypeId.cs" />
+    <Compile Remove="Migrations\20201002122218_CreateTableAssessmentFormTypeAndAlterAssessmentTemplateToAddColumnTypeId.Designer.cs" />
+    <Compile Remove="Migrations\20201015064439_CreateTableAssessmentUserCommentSetForeignKeyWithAssessmentUserStatus.cs" />
+    <Compile Remove="Migrations\20201015064439_CreateTableAssessmentUserCommentSetForeignKeyWithAssessmentUserStatus.Designer.cs" />
+    <Compile Remove="Migrations\20201019095913_CreateTableAssessmentLinkForm.cs" />
+    <Compile Remove="Migrations\20201019095913_CreateTableAssessmentLinkForm.Designer.cs" />
+    <Compile Remove="Migrations\20201019100939_UpdateAssessmentTemplateTypeIdSeedData.cs" />
+    <Compile Remove="Migrations\20201019100939_UpdateAssessmentTemplateTypeIdSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20201019101744_AddAssessmentFormTypeSeedData.cs" />
+    <Compile Remove="Migrations\20201019101744_AddAssessmentFormTypeSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20201019103732_CreateTableAssessmentLinkForm.cs" />
+    <Compile Remove="Migrations\20201019103732_CreateTableAssessmentLinkForm.Designer.cs" />
+    <Compile Remove="Migrations\20201103092942_AlterAssessmentAnswerAddingShowEmpLevel.cs" />
+    <Compile Remove="Migrations\20201103092942_AlterAssessmentAnswerAddingShowEmpLevel.Designer.cs" />
+    <Compile Remove="Migrations\20201123124206_AlterAssessmentTemplateTableAddIsStashColumn.cs" />
+    <Compile Remove="Migrations\20201123124206_AlterAssessmentTemplateTableAddIsStashColumn.Designer.cs" />
+    <Compile Remove="Migrations\20201207152314_ALterAnswerTableAddDateCreated.cs" />
+    <Compile Remove="Migrations\20201207152314_ALterAnswerTableAddDateCreated.Designer.cs" />
+    <Compile Remove="Migrations\20210116164025_AlterCategoryDomChangeCategoryCode.cs" />
+    <Compile Remove="Migrations\20210116164025_AlterCategoryDomChangeCategoryCode.Designer.cs" />
+    <Compile Remove="Migrations\20210116165526_AlterCategoryDomChangeCategoryCode.cs" />
+    <Compile Remove="Migrations\20210116165526_AlterCategoryDomChangeCategoryCode.Designer.cs" />
+    <Compile Remove="Migrations\20210116170853_AlterCategoryDomChangeCategoryCode.cs" />
+    <Compile Remove="Migrations\20210116170853_AlterCategoryDomChangeCategoryCode.Designer.cs" />
+    <Compile Remove="Migrations\20210116171557_AddFKCategoryDomTempateCategoryOrder.cs" />
+    <Compile Remove="Migrations\20210116171557_AddFKCategoryDomTempateCategoryOrder.Designer.cs" />
+    <Compile Remove="Migrations\20210116171937_AddFKCategoryDomTempateCategoryOrder.cs" />
+    <Compile Remove="Migrations\20210116171937_AddFKCategoryDomTempateCategoryOrder.Designer.cs" />
+    <Compile Remove="Migrations\20210116172108_RemoveCategoryCodeInCategoryDom.cs" />
+    <Compile Remove="Migrations\20210116172108_RemoveCategoryCodeInCategoryDom.Designer.cs" />
+    <Compile Remove="Migrations\20210116172332_AddFKCategoryDomTempateCategoryOrder.cs" />
+    <Compile Remove="Migrations\20210116172332_AddFKCategoryDomTempateCategoryOrder.Designer.cs" />
+    <Compile Remove="Migrations\20210116172802_AddFKCategoryDomTempateCategoryOrder.cs" />
+    <Compile Remove="Migrations\20210116172802_AddFKCategoryDomTempateCategoryOrder.Designer.cs" />
+    <Compile Remove="Migrations\20210116174901_AddFKCategoryDomTempateCategoryOrder.cs" />
+    <Compile Remove="Migrations\20210116174901_AddFKCategoryDomTempateCategoryOrder.Designer.cs" />
+    <Compile Remove="Migrations\20210116180727_AlterCategoryDomAddAssessmentTemplateId.cs" />
+    <Compile Remove="Migrations\20210116180727_AlterCategoryDomAddAssessmentTemplateId.Designer.cs" />
+    <Compile Remove="Migrations\20210118101625_AlterCategoryDomTranslationAddAssessmentTemplateId.cs" />
+    <Compile Remove="Migrations\20210118101625_AlterCategoryDomTranslationAddAssessmentTemplateId.Designer.cs" />
+    <Compile Remove="Migrations\20210118112634_NewTableAssessmentCategory.cs" />
+    <Compile Remove="Migrations\20210118112634_NewTableAssessmentCategory.Designer.cs" />
+    <Compile Remove="Migrations\20210118114608_UpdateCategoryCodeFKWithAssessmentCategoryId.cs" />
+    <Compile Remove="Migrations\20210118114608_UpdateCategoryCodeFKWithAssessmentCategoryId.Designer.cs" />
+    <Compile Remove="Migrations\20210118114907_NewTableAssessmentCategory.cs" />
+    <Compile Remove="Migrations\20210118114907_NewTableAssessmentCategory.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ProjectHRCommon">
+      <HintPath>..\..\Libararies\Common\netcoreapp2.1\ProjectHRCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+version: '3.0'
+
+volumes:
+  datafiles:
+
+services:
+  db:
+    image: mysql:5.7.29
+    volumes:
+      - datafiles:/var/lib/mysql
+      - ./_MySQL_Init_Script:/docker-entrypoint-initdb.d
+    restart: always
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: phr_assessment
+      
+  assessment:
+    image: assessment-image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db    
+    ports:
+      - "44331:443"
+    environment:
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=rS6T9C5Jt8EbHUxT
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/certs/aspnetapp.pfx
+      - ASPNETCORE_ENVIRONMENT=development
+      - ASPNETCORE_URLS=https://+:443
+    volumes:
+      - ~/.aspnet/https:/https:ro
+      - ./certs/:/certs/
+    restart: always
